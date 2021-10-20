@@ -1,0 +1,35 @@
+#box{
+    width: 300px;
+    height: 300px;
+    border-color: black;
+    
+    margin: 100px 500px;
+}
+p{
+    padding: 15px;
+}
+
+h1{
+    text-align: center;
+}
+
+button{
+    width: 70px;
+    height: 30px;
+}
+
+#submit{
+    text-align: center;
+}
+
+nav{
+    float: left;
+    padding: 20px;
+    width: 30%;
+
+}
+
+article{
+    float: left;
+    width: 70%;
+}

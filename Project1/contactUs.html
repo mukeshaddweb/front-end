@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About us</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+
+        body{
+        background-color: orange;
+    }
+
+        header{
+        padding: 20px;
+        background-color:rgb(238, 193, 108);
+    }
+    #profile_image{
+        margin: 20px 70px 20px 70px;
+    }
+    #profile_name{
+        margin: 20px 190px 30px 170px;
+        font-size: 40px;
+    }
+    a{
+        margin: 4px 4px;
+        text-decoration: none;
+        font-size: 20px;
+    }
+
+    div{
+        width: 800px;
+        height: 300px;
+        border-color: black;
+        padding: 5%;
+        margin-left: 250px;
+        
+
+    }
+    fieldset{
+        padding: 5%;
+        border-radius: 5%;
+        background-color:rgb(238, 193, 108);
+        text-align: center;
+
+        
+    }
+
+    #contactus{
+        background-color: darkblue;
+        color: white;
+        padding: 10px;
+        border-radius: 8%;
+    }
+
+    footer{
+        text-align: center;
+        background-color: rgb(238, 193, 108); 
+        margin: 180px;      
+    }
+
+    /* form p{
+        font-size: 20px;
+        margin: -10px;
+        font-family: ariel;
+    } */
+    </style>
+</head>
+<body>
+    <header>
+        
+        <span id="profile_image"><img src="images/profile.jpg" alt="profile pic" width="50px" height="50px"></span>
+        <span id="profile_name">Mukesh Kumar Bheel</span>
+        <a href="home.html">Home</a>
+        <a href="about.html" id="about">About</a>
+        <a href="reels.html" id="reels">Reels</a>
+        <a href="contactUs.html" id="contactus">Contact Us</a>
+    
+    </header>
+
+    <section>    
+
+    <div>
+        <fieldset>
+            <form action="">
+                <h1>Contact Us</h1>
+                <pre>
+                    <p>First Name:      <input type="text" name="firstname" required></p>
+                    <p>Last Name:       <input type="text" name="lastname" required></p>
+                    <p>Email:           <input type="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required></p><br>
+                    <p>Contact:         <input type="tel" name="contact" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required></p><br>
+                    <p>Address:         <textarea name="address" id="" cols="20" rows="5" required placeholder="Enter your Address"></textarea></p><br>
+                    <p>Remarks:         <textarea name="remarks" id="" cols="20" rows="5" placeholder="Add remarks if any"></textarea><p><br>                    
+                    <input type="submit" name="submit">   <input type="reset">
+                </pre>
+                </form>
+        </fieldset>
+    </div>
+
+    </section>
+
+    <!-- <footer>
+        <p>@copyright 2020-21</p>
+    </footer> -->
+
+</body>
+</html>

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Home</title>
 </head>
 <style>
     *{
@@ -42,7 +42,7 @@
         margin: 20px 70px 20px 70px;
     }
     #profile_name{
-        margin: 20px 190px 30px 170px;
+        margin: 20px 112px 30px 163px;
         font-size: 40px;
     }
     a{
@@ -66,16 +66,53 @@
         padding: 10px;
         border-radius: 8%;
     }
+
+    /* hover effect */
+
+    a:hover{
+        /* background-color: grey; */
+        color: white;
+        margin-bottom: 3px;
+        font-size: 25px;
+    }
+
+    .tooltip {
+        position: relative;
+        display: inline-block;
+        /* border-bottom: 1px dotted black;  */
+    } 
+
+    /* Tooltip text */
+    .tooltip .tooltiptext {
+        visibility: hidden;
+        width: 120px;
+        background-color: black;
+        color: #fff;
+        text-align: center;
+        padding: 5px 0;
+        border-radius: 6px;
+    
+    /* Position the tooltip text - see examples below! */
+        position: absolute;
+        z-index: 1;
+    }
+    /* Show the tooltip text when you mouse over the tooltip container */
+    .tooltip:hover .tooltiptext {
+        visibility: visible;
+    } 
 </style>
 <body>
     <header>
-        
-            <span id="profile_image"><img src="images/profile.jpg" alt="profile pic" width="50px" height="50px"></span>
+            <div class="tooltip">
+                <span id="profile_image"><img src="images/profile.jpg" alt="profile pic" width="50px" height="50px"></span>
+                <span class="tooltiptext">Hello there</span>
+            </div>
             <span id="profile_name">Mukesh Kumar Bheel</span>
             <a href="home.html" id="home">Home</a>
             <a href="about.html">About</a>
             <a href="reels.html" id="reels">Reels</a>
             <a href="contactUs.html">Contact Us</a>
+            <a href="index.html">Logout</a>
         
     </header>
 

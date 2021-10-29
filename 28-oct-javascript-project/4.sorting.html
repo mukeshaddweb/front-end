@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        var num1 = 3;
+        var num2 = 5;
+        var num3= 1;
+        var max = 0;
+
+        var first;
+        var second;
+        var third;
+
+        if(num1>num2 && num1>num3){
+            first = num1;
+            if(num2>num3){
+                second = num2;
+                third = num3;
+            }else{
+                second = num3;
+                third = num2; 
+            }
+        }else if(num2>num1 && num2>num3){
+            first = num2;
+            if(num1>num3){
+                second = num1;
+                third = num3;
+            }else{
+                second = num3;
+                third = num1; 
+            }
+        }else if(num3>num1 && num3>num2){
+            first = num3;
+            if(num1>num2){
+                second = num1;
+                third = num2;
+            }else{
+                second = num2;
+                third = num1; 
+            }
+        }
+
+        document.write(num1+" "+num2+" "+num3+"<br></br>");
+        document.write(third+" "+second+" "+first+"<br>");
+        
+        
+    </script>
+</body>
+</html>

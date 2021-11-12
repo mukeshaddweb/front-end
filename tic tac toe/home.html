@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tic tac toe</title>
+    <style>
+        body {
+            background-color: black;
+            /* height: 100vh; */
+        }
+
+        h1 {
+            height: 50px;
+            text-align: center;
+            color: white;
+            /* background-color: aliceblue; */
+            font-size: 30px;
+            margin-top: 80px;
+        }
+
+        .container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 300px;
+            height: 300px;
+            border: 1px solid blue;
+            box-shadow: -2px 5px 20px 1px rgb(79, 79, 116);
+        }
+
+        .row {
+            height: 32%;
+        }
+
+        .col {
+            height: 100%;
+            width: 32%;
+            float: left;
+            border: 2px solid white;
+            /*box-shadow: -2px 5px 20px 1px blue;*/
+            color: white;
+            font-weight: bolder;
+            text-align: center;
+            cursor: pointer;
+            font-size: 80px;
+            border-radius: 5px;
+        }
+
+        button {
+            margin-top: 325px;
+            padding: 7px 12px;
+            cursor: pointer;
+            box-shadow: -2px 5px 20px 1px blue;
+            border-radius: 15px;
+            font-weight: bolder;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="message">
+        <h1 id="message">Tic Tac Toe</h1>
+    </div>
+    <h1><a href="home.html" id="restart"><button>Reset</button></a>
+
+        <div class="container">
+            <div class="row">
+                <div class="col" onclick="playeraction(this,0,0)"></div>
+                <div class="col" onclick="playeraction(this,0,1)"></div>
+                <div class="col" onclick="playeraction(this,0,2)"></div>
+            </div>
+            <div class="row">
+                <div class="col" onclick="playeraction(this,1,0)"></div>
+                <div class="col" onclick="playeraction(this,1,1)"></div>
+                <div class="col" onclick="playeraction(this,1,2)"></div>
+            </div>
+            <div class="row">
+                <div class="col" onclick="playeraction(this,2,0)"></div>
+                <div class="col" onclick="playeraction(this,2,1)"></div>
+                <div class="col" onclick="playeraction(this,2,2)"></div>
+            </div>
+        </div>
+
+        <script src="home.js"></script>
+</body>
+
+</html>

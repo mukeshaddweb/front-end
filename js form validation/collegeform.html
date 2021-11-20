@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <title>Application Form</title>
+</head>
+
+<body>
+    <div class="personalDetails container-fluid">
+        <h1 class=" bg-light text-center">Application Form</h1>
+        <form onsubmit="return validation()">
+            <div class="row mb-4">
+                <div class="col-sm-3"></div>
+                <div class="col-sm-6"></div>
+                <div class="col-sm-3"></div>
+
+                <div class="col-sm-12 bg-primary text-white py-4 display-8 mb-4">Personal Details</div>
+
+                <div class="col-sm-4">
+                    <div class="mb-3">
+                        <label for="formGroupExampleInput" class="form-label">Application Number</label>
+                        <input type="text" name="application_number" class="form-control" id="application_number">
+                        <span id="userapplication" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="mb-3">
+                        <label for="formGroupExampleInput" class="form-label">Student Name</label>
+                        <input type="text" name="name" class="form-control" id="name" placeholder="Enter Full Name">
+                        <span id="username" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="mb-3">
+                        <label for="formGroupExampleInput" class="form-label">Email</label>
+                        <input type="email" name="email" class="form-control" id="email" placeholder="Enter Email ID">
+                    </div>
+                    <span id="useremail" class="text-danger"></span>
+                </div>
+
+                <div class="col-sm-4">
+                    <div class="mb-3">
+                        <label for="formGroupExampleInput" class="form-label">Contact Number</label>
+                        <input type="tel" name="contact" class="form-control" id="contact"
+                            placeholder="Enter Contact Number">
+                    </div>
+                    <span id="usercontact"></span>
+                </div>
+                <div class="col-sm-4">
+                    <div class="mb-3">
+                        <label for="formGroupExampleInput" class="form-label">Date of Birth</label>
+                        <input type="date" name="dob" class="form-control" id="dob" placeholder="">
+                    </div>
+                    <span id="userdob" class="text-danger"></span>
+                </div>
+                <div class="col-sm-4">
+                    <div class="mb-3">
+                        <label for="formGroupExampleInput" class="form-label">Gender</label><br>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="gender" id="gender" value="male">
+                            <label class="form-check-label" for="inlineRadio1">male</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="gender" id="gender" value="female">
+                            <label class="form-check-label" for="inlineRadio1">female</label>
+                        </div>
+                    </div>
+                    <span id="usergender" class="text-danger"></span>
+                </div>
+
+                <div class="col-sm-4">
+                    <div class="mb-3">
+                        <label for="formGroupExampleInput" class="form-label">Aadhar Number</label>
+                        <input type="number" name="aadhar" class="form-control" id="aadhar">
+                    </div>
+                    <span id="useraadhar" class="text-danger"></span>
+                </div>
+                <div class="col-sm-4">
+                    <div class="mb-3">
+                        <label for="formGroupExampleInput" class="form-label">Father's Name</label>
+                        <input type="text" class="form-control" name="fname" id="fname"
+                            placeholder="Enter Father's Name">
+                    </div>
+                    <span id="userfname" class="text-danger"></span>
+                </div>
+                <div class="col-sm-4">
+                    <div class="mb-3">
+                        <label for="formGroupExampleInput" class="form-label">Mother's Name</label>
+                        <input type="text" class="form-control" name="mname" id="mname"
+                            placeholder="Enter Mother's Name">
+                    </div>
+                    <span id="usermname" class="text-danger"></span>
+                </div>
+
+                <div class="col-sm-4">
+                    <label for="formGroupExampleInput" class="form-label">Category</label>
+                    <select class="form-select" name="category" id="category" aria-label="Default select example">
+                        <option selected>Open this select menu</option>
+                        <option value="General">General</option>
+                        <option value="OBC">OBC</option>
+                        <option value="SC">SC</option>
+                        <option value="ST">ST</option>
+                    </select>
+                    <span id="usercategory" class="text-danger"></span>
+                </div>
+                <div class="col-sm-4">
+                    <label for="formGroupExampleInput" class="form-label">Religion</label>
+
+                    <select class="form-select" name="religion" id="religion" aria-label="Default select example">
+                        <option selected>Open this select menu</option>
+                        <option value="Hindu">Hindu</option>
+                        <option value="Muslim">Muslim</option>
+                        <option value="Sikh">Sikh</option>
+                        <option value="Christian">Christian</option>
+                        <option value="Others">Others</option>
+                    </select>
+                    <span id="userreligion" class="text-danger"></span>
+                </div>
+                <div class="col-sm-4">
+                    <div class="mb-3">
+                        <label for="formGroupExampleInput" class="form-label">Nationality</label>
+                        <input type="text" class="form-control" name="nationality" id="nationality" placeholder="">
+                    </div>
+                    <span id="usernationality" class="text-danger"></span>
+                </div>
+
+                <!-- ...........address details.................. -->
+                <div class="col-sm-12 bg-primary text-white py-4 display-8 my-4">Address Details</div>
+                <div class="col-sm-6">
+                    <div class="mb-3">
+                        <label for="formGroupExampleInput" class="form-label">Address</label>
+                        <input type="text" class="form-control" name="address" id="address">
+                    </div>
+                    <span id="useraddress" class="text-danger"></span>
+                </div>
+                <div class="col-sm-6">
+                    <label for="formGroupExampleInput" class="form-label">State</label>
+                    <select class="form-select" name="state" id="state" aria-label="Default select example">
+                        <option selected>Open this select menu</option>
+                        <option value="Rajasthan">Rajasthan</option>
+                        <option value="Gujrat">Gujrat</option>
+                        <option value="Bihar">Bihar</option>
+                        <option value="UP">UP</option>
+                    </select>
+                    <span id="userstate" class="text-danger"></span>
+                </div>
+                <div class="col-sm-6">
+                    <div class="mb-3">
+                        <label for="formGroupExampleInput" class="form-label">City</label>
+                        <input type="text" class="form-control" name="city" id="city">
+                    </div>
+                    <span id="usercity" class="text-danger"></span>
+                </div>
+                <div class="col-sm-6">
+                    <div class="mb-3">
+                        <label for="formGroupExampleInput" class="form-label">Pincode</label>
+                        <input type="tel" class="form-control" name="pincode" id="pincode">
+                    </div>
+                    <span id="userpincode" class="text-danger"></span>
+                </div>
+
+                <!-- .......................course details..................... -->
+                <div class="col-sm-12 bg-primary text-white py-4 display-8 my-4">Course Details</div>
+                <div class="col-sm-4">
+                    <label for="formGroupExampleInput" class="form-label">Discipline</label>
+                    <select class="form-select" name="city" id="city" aria-label="Default select example">
+                        <option selected>select</option>
+                        <option value="ug">UG</option>
+                        <option value="pg">PG</option>
+
+                    </select>
+                    <span id="usercity" class="text-danger"></span>
+                </div>
+                <div class="col-sm-4">
+                    <label for="formGroupExampleInput" class="form-label">Programme</label>
+                    <select class="form-select" name="programme" id="programme" aria-label="Default select example">
+                        <option selected>select</option>
+                        <option value="btech">Btech</option>
+                        <option value="bcom">Bcom</option>
+
+                    </select>
+                    <span id="programme" class="text-danger"></span>
+                </div>
+                <div class="col-sm-4">
+                    <label for="formGroupExampleInput" class="form-label">Specialization</label>
+                    <select class="form-select" name="specialization" id="specialization"
+                        aria-label="Default select example">
+                        <option selected>select</option>
+                        <option value="cs">Computer science</option>
+                        <option value="ce">Civil</option>
+
+                    </select>
+                    <span id="userspecialization" class="text-danger"></span>
+                </div>
+
+                <!-- ...........education details..................... -->
+                <div class="col-sm-12 bg-primary text-white py-4 display-8 my-4">Education Details</div>
+                <div class="col-sm-12">
+
+                    <div class="row">
+                        <!-- <div class="col-sm-12"> -->
+                        <div class="col-sm-1">10<sup>th</sup></div>
+                        <div class="col-sm-2">
+                            <label for="formGroupExampleInput" class="form-label">Status</label>
+                            <select class="form-select" name="status10" id="status10"
+                                aria-label="Default select example">
+                                <option selected value="passed">Passed</option>
+
+                            </select>
+                            <span id="userstatus10" class="text-danger"></span>
+                        </div>
+                        <div class="col-sm-2">
+                            <div class="mb-3">
+                                <label for="formGroupExampleInput" class="form-label">Board</label>
+                                <input type="text" name="board10" id="board10" class="form-control">
+                            </div>
+                            <span id="userboard10" class="text-danger"></span>
+                        </div>
+                        <div class="col-sm-2">
+                            <div class="mb-3">
+                                <label for="formGroupExampleInput" class="form-label">Percentage</label>
+                                <input type="number" min="45" max="100" name="percentage10" id="percentage10" class="form-control">
+                            </div>
+                            <span id="userpercentage10" class="text-danger"></span>
+                        </div>
+                        <div class="col-sm-2">
+                            <div class="mb-3">
+                                <label for="formGroupExampleInput" class="form-label">Year</label>
+                                <input type="number" value="2021" name="year10" id="year10" class="form-control">
+                            </div>
+                            <span id="useryear10" class="text-danger"></span>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="mb-3">
+                                <label for="formGroupExampleInput" class="form-label">Subject</label>
+                                <input type="text" value="All" class="form-control" name="subject10" id="subject10">
+                            </div>
+                            <span id="usersubject10" class="text-danger"></span>
+                        </div>
+                        <!-- </div> -->
+                    </div>
+
+                    <div class="row">
+                        <!-- <div class="col-sm-12"> -->
+                        <div class="col-sm-1">12<sup>th</sup></div>
+                        <div class="col-sm-2">
+                            <label for="formGroupExampleInput" class="form-label">Status</label>
+                            <select class="form-select" name="status12" id="status12"
+                                aria-label="Default select example">
+                                <option selected value="passed">Passed</option>
+
+                            </select>
+                            <span id="userstatus12" class="text-danger"></span>
+                        </div>
+                        <div class="col-sm-2">
+                            <div class="mb-3">
+                                <label for="formGroupExampleInput" class="form-label">Board</label>
+                                <input type="text" class="form-control" name="board12" id="board12">
+                            </div>
+                            <span id="userboard12" class="text-danger"></span>
+                        </div>
+                        <div class="col-sm-2">
+                            <div class="mb-3">
+                                <label for="formGroupExampleInput" class="form-label">Percentage</label>
+                                <input type="number" min="45" max="100" name="percentage12" id="percentage12"
+                                    class="form-control">
+                            </div>
+                            <span id="userpercentage12" class="text-danger"></span>
+                        </div>
+                        <div class="col-sm-2">
+                            <div class="mb-3">
+                                <label for="formGroupExampleInput" class="form-label">Year</label>
+                                <input type="number" value="2021" name="year12" id="year12" class="form-control">
+                            </div>
+                            <span id="useryear12" class="text-danger"></span>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="mb-3">
+                                <label for="formGroupExampleInput" class="form-label">Subject</label>
+                                <input type="text" value="All" name="subject12" id="subject12" class="form-control">
+                            </div>
+                            <span id="usersubject12" class="text-danger"></span>
+                        </div>
+                        <!-- </div> -->
+                    </div>
+
+                    <div class="row">
+                        <!-- <div class="col-sm-12"> -->
+                        <div class="col-sm-1">UG</div>
+                        <div class="col-sm-2">
+                            <label for="formGroupExampleInput" class="form-label">Status</label>
+                            <select class="form-select" name="statusug" id="statusug"
+                                aria-label="Default select example">
+                                <option selected value="passed">Passed</option>
+                                <option>Persuing</option>
+
+                            </select>
+                            <span id="userstatusug" class="text-danger"></span>
+                        </div>
+                        <div class="col-sm-2">
+                            <div class="mb-3">
+                                <label for="formGroupExampleInput" class="form-label">Board</label>
+                                <input type="text" class="form-control" name="boardug" id="boardug">
+                            </div>
+                            <span id="userboardug" class="text-danger"></span>
+                        </div>
+                        <div class="col-sm-2">
+                            <div class="mb-3">
+                                <label for="formGroupExampleInput" class="form-label">Percentage</label>
+                                <input type="number" min="45" max="100" name="percentageug" id="percentageug"
+                                    class="form-control">
+                            </div>
+                            <span id="userpercentageug" class="text-danger"></span>
+                        </div>
+                        <div class="col-sm-2">
+                            <div class="mb-3">
+                                <label for="formGroupExampleInput" class="form-label">Year</label>
+                                <input type="number" value="2021" name="yearug" id="yearug" class="form-control">
+                            </div>
+                            <span id="useryearug" class="text-danger"></span>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="mb-3">
+                                <label for="formGroupExampleInput" class="form-label">Subject</label>
+                                <input type="text" value="All" class="form-control" name="subjectug" id="subjectug">
+                            </div>
+                            <span id="usersubjectug" class="text-danger"></span>
+                        </div>
+                        <!-- </div> -->
+                    </div>
+                </div>
+                <!-- ....................submit form................... -->
+                <div class="col-sm-12 p-4 border">
+                    <div class="border bg-light">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" name="check" id="check">
+                            <label class="form-check-label" for="flexCheckDefault">
+                                I have accepted the terms and disclaimer.
+                            </label>
+                        </div>
+
+
+                    </div>
+
+                </div>
+                <div class="col-sm-3">
+                    <input type="submit" name="submit" id="submit" class="btn btn-lg btn-danger"
+                        value="Proceed to Payment">
+                </div>
+
+            </div>
+        </form>
+
+
+    </div>
+
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <script src="js/collegeform.js"></script>
+
+
+</body>
+
+</html>

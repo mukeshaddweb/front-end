@@ -1,0 +1,77 @@
+body{
+    background-color: black;
+}
+
+.container{
+    width: 443px;
+    height: 500px;
+    /* border: solid rgb(209, 199, 199) 1px; */
+    align-items: center;
+    margin: 50px auto;
+    padding: 2px 16px;
+    box-shadow: 2px 0px 7px 4px red;
+    border-radius: 7px;
+}
+
+.heading{
+    text-align: center;
+    color: rgb(223, 51, 51);
+    background-color: black;
+    
+}
+.input {
+    width: 340px;
+    height: 27px;
+    font-size: 19px;
+    vertical-align: middle;
+    color: black;
+    border-radius: 22px;
+    padding: 3px 16px;
+}
+.addbutton{
+    width: 53px;
+    height: 33px;
+    font-size: 19px;
+    vertical-align: middle;
+    color: white;
+    border-radius: 11px;
+}
+
+.tasknbuttons{
+    display: flex;
+    /* width: 334px; */
+    margin: 50px 0px;
+}
+
+.task{
+    /* display: flex; */
+    width: 281px;
+    height: 50px;
+    /* border: green solid 1px; */
+    vertical-align: middle;
+}
+.buttons{
+    /* width: 10px; */
+    float: right;
+    height: 50px;
+    /* border: blue solid 1px; */
+    vertical-align: middle;
+}
+button{
+    height: 42px;
+    width: 70px;
+    margin: 4px 4px;
+    font-size: 16px;
+    color: white;
+    background-color: black;
+    border-radius: 11px;
+    
+}
+
+.para{
+    padding-left: 12px;
+    vertical-align: middle;
+    height: 34px;
+    color: white;
+    background-color: black;
+}
